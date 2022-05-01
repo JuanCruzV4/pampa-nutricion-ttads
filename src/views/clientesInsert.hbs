@@ -1,0 +1,54 @@
+<form action="/cliente/insert" method="POST">
+
+    <div>
+        <label for="idUsuario">Ingrese id Usuario</label>
+        <input type="text" name="idUsuario" placeholder="ID" value="{{cliente.idUsuario}}">
+    </div>
+
+    <div>
+        <label for="razonSocial">Ingrese Razon Social</label>
+        <input type="text" name="razonSocial" placeholder="Razon Social" value="{{cliente.razonSocial}}">
+    </div>
+
+    <div>
+        <label for="usuario">Ingrese Nombre de Usuario</label>
+        <input type="text" name="usuario" placeholder="Usuario" value="{{cliente.usuario}}">
+    </div>
+
+    <div>
+        <label for="password">Ingrese Contraseña</label>
+        <input type="text" name="password" placeholder="Password" value="{{cliente.password}}">
+    </div>
+
+    <div>
+        <label for="cuil">Ingrese CUIL</label>
+        <input type="text" name="cuil" placeholder="CUIL" value="{{cliente.cuil}}" >
+    </div>
+
+    <div>
+        <label for="cuit">Ingrese CUIT</label>
+        <input type="text" name="cuit" placeholder="CUIT" value="{{cliente.cuit}}">
+    </div>
+
+    <div>
+        <label for="email">Ingrese EMAIL</label>
+        <input type="text" name="email" placeholder="Email" value="{{cliente.email}}">
+    </div>
+
+    <div>
+        <label for="fechaNcimiento">Ingrese Fecha de Nacimiento</label>
+        <input type="text" name="fechaNacimiento" placeholder="Fecha Nacimiento" value="{{cliente.fechaNacimiento}}">
+    </div>
+
+    <div>
+        <label for="direccion">Ingrese Direccion</label>
+        <input type="text" name="direccion" placeholder="Direccion" value="{{cliente.direccion}}">
+    </div>
+
+    <div>
+        <label for="telefono">Ingrese Telefono</label>
+        <input type="text" name="telefono" placeholder="Telefono" value="{{cliente.telefono}}">
+    </div>
+
+<button>Insertar</button>
+</form>

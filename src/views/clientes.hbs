@@ -1,0 +1,33 @@
+<!-- Link -->
+<li><a href="/clientesInsert">Insert</a></li>
+
+<!-- Table -->
+<table>
+   <thead>
+        <tr>
+            <th>Nro</th>
+            <th>razonSocial</th>
+            <th>Tel</th>
+            <th>Operaciones</th>
+        </tr>
+   </thead>
+    <tbody>
+
+
+    {{#each clientes}}
+    <tr>
+        <td>{{@index}}</td>
+        <td>{{razonSocial}}</td>
+        <td>{{telefono}}</td>
+        <td>
+            <button>ELIMINAR</button>
+            <a href="/clientesUpdate/{{_id}}">Edit</a>
+        </td>
+    </tr>
+    {{/each}}
+
+    </tbody>
+
+</table>
+
+
