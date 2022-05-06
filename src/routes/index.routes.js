@@ -45,14 +45,13 @@ router.post('/cliente/insert', async (req, res) =>{
 
 });
 
-router.post("/clientesUpdate/edit/:id ", async (req, res)=> {
+router.post("/cliente/update/:id", async (req, res)=> {
 
     //console.log(req.body);
     //res.send("recived");
     const {id} = req.params;
-
     await Cliente.findByIdAndUpdate(id, req.body);
-    res.redirect("/clientes");
+    res.redirect("/");
 })
 router.get('/sucursales', (req, res) =>{
     res.render('sucursales.hbs');
