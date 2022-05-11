@@ -1,70 +1,25 @@
 const {Router} = require("express");
 const router = Router();
-const Cliente = require('../models/cliente');
+//const Cliente = require('../models/cliente');
+const controller = require('../controllers/pampa.controllers');
 
+router.get('/',controller.renderIndex);
+router.get('/about', controller.renderAbout);
+//   CLIENTE
+//     GET
+router.get('/clientes', controller.renderCLientes );
+router.get('/clientesInsert', controller.renderCInsert);
+router.get('/clientesUpdate/:id', controller.renderCUpdate);
+router.get('/clientesDelete/:id', controller.renderCDelete);
+//     POST
+router.post('/cliente/insert', controller.renderCInsertPost);
+router.post("/cliente/update/:id", controller.renderCUpdatePost);
 
-router.get('/', (req, res) =>{
-    res.render ('index.hbs');
-});
-
-router.get('/about', (req, res) =>{
-    res.render('about.hbs');
-});
-
-//CLIENTE
-//GET
-router.get('/clientes', async (req, res) =>{
-
-    const losClientes = await Cliente.find().lean();
-
-    res.render('clientes.hbs', {clientes:losClientes});
-});
-router.get('/clientesInsert', (req, res) =>{
-    res.render('clientesInsert.hbs');
-});
-
-router.get('/clientesUpdate/:id', async (req, res) =>{
-    try{
-          const elCliente = await Cliente.findById(req.params.id).lean();
-          res.render('clientesUpdate.hbs', {cliente:elCliente});
-    }catch (error){
-     console.log(error.message);
-    }
-});
-
-//POST
-router.post('/cliente/insert', async (req, res) =>{
-
-    try{
-        const cli =  Cliente(req.body);
-        await cli.save();
-        res.redirect("/clientes");
-    }catch (error){
-        console.log(error);
-    }
-
-});
-
-router.post("/cliente/update/:id", async (req, res)=> {
-
-    //console.log(req.body);
-    //res.send("recived");
-    const {id} = req.params;
-    await Cliente.findByIdAndUpdate(id, req.body);
-    res.redirect("/");
-})
-router.get('/sucursales', (req, res) =>{
-    res.render('sucursales.hbs');
-});
-
-router.get('/proveedores', (req, res) =>{
-    res.render('proveedores.hbs');
-});
-
-router.get('/tiposmascotas', (req, res) =>{
-    res.render('tipomascotas.hbs');
-});
-
-
+//   SUCURSALES
+router.get('/sucursales', controller.renderSucursales);
+//   PROVEEDORES
+router.get('/proveedores', controller.renderProveedores);
+//   TIPOSMASCOTAS
+router.get('/tiposmascotas', controller.renderTiposMascotas);
 
 module.exports = router;
