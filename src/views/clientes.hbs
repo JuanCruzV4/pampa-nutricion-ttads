@@ -1,8 +1,18 @@
 <!-- Link -->
-<li><a href="/clientesInsert">Insert</a></li>
 
 <!-- Table -->
-<table>
+<div class="container-fluid card card-body p-4 rounded-0 bg-dark text-white ">
+
+
+        <div class="row">
+            <div class="col-md-5">
+            <a href="/clientesInsert" type="button" class="btn btn-primary">Insert</a>
+            </div>
+        </div>
+
+
+        <div class="col-md-7">
+<table class="table table-bordered table-hover table-dark">
    <thead>
         <tr>
             <th>Nro</th>
@@ -12,22 +22,24 @@
         </tr>
    </thead>
     <tbody>
-
-
-    {{#each clientes}}
-    <tr>
-        <td>{{@index}}</td>
-        <td>{{razonSocial}}</td>
-        <td>{{telefono}}</td>
-        <td>
-            <a href="/clientesDelete/{{_id}}">Delete</a>
-            <a href="/clientesUpdate/{{_id}}">Edit</a>
-        </td>
-    </tr>
-    {{/each}}
+                {{#each clientes}}
+                    <tr>
+                        <td>{{@index}}</td>
+                        <td>{{razonSocial}}</td>
+                        <td>{{telefono}}</td>
+                        <td>
+                            <a href="/clientesDelete/{{_id}}" class="btn btn-danger">Delete</a>
+                            <a href="/clientesUpdate/{{_id}}" class="btn btn-info">Edit</a>
+                        </td>
+                    </tr>
+                {{/each}}
 
     </tbody>
 
 </table>
 
+        </div>
+    </div>
+
+</div>
 

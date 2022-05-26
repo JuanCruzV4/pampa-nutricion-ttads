@@ -1,54 +1,71 @@
-<form action="/cliente/insert" method="POST">
+<div class="container-fluid card card-body p-4 rounded-0 bg-dark text-white">
 
-    <div>
-        <label for="idUsuario">Ingrese id Usuario</label>
-        <input type="text" name="idUsuario" placeholder="ID" value="{{cliente.idUsuario}}">
+    <div class="row align-items-center">
+        <h3>Añade un Cliente</h3>
     </div>
 
-    <div>
-        <label for="razonSocial">Ingrese Razon Social</label>
-        <input type="text" name="razonSocial" placeholder="Razon Social" value="{{cliente.razonSocial}}">
-    </div>
+    <div class="row justify-content-center" >
+        <div class="form-group col-md-6">
 
-    <div>
-        <label for="usuario">Ingrese Nombre de Usuario</label>
-        <input type="text" name="usuario" placeholder="Usuario" value="{{cliente.usuario}}">
-    </div>
 
-    <div>
-        <label for="password">Ingrese Contraseña</label>
-        <input type="text" name="password" placeholder="Password" value="{{cliente.password}}">
-    </div>
 
-    <div>
-        <label for="cuil">Ingrese CUIL</label>
-        <input type="text" name="cuil" placeholder="CUIL" value="{{cliente.cuil}}" >
-    </div>
+            <div class="center-block"></div>
+    <form action="/cliente/insert" method="POST">
 
-    <div>
-        <label for="cuit">Ingrese CUIT</label>
-        <input type="text" name="cuit" placeholder="CUIT" value="{{cliente.cuit}}">
-    </div>
+        <div>
+            <label class="col-lg-4 control-label" for="idUsuario">Ingrese id Usuario:  </label>
+            <input type="text" name="idUsuario" placeholder="ID" value="{{cliente.idUsuario}}">
+        </div>
 
-    <div>
-        <label for="email">Ingrese EMAIL</label>
-        <input type="text" name="email" placeholder="Email" value="{{cliente.email}}">
-    </div>
+        <div>
+            <label class="col-lg-4 control-label" for="razonSocial">Ingrese Razon Social</label>
+            <input type="text" name="razonSocial" placeholder="Razon Social" value="{{cliente.razonSocial}}">
+        </div>
 
-    <div>
-        <label for="fechaNcimiento">Ingrese Fecha de Nacimiento</label>
-        <input type="text" name="fechaNacimiento" placeholder="Fecha Nacimiento" value="{{cliente.fechaNacimiento}}">
-    </div>
+        <div>
+            <label class="col-lg-4 control-label" for="usuario">Ingrese Nombre de Usuario</label>
+            <input type="text" name="usuario" placeholder="Usuario" value="{{cliente.usuario}}">
+        </div>
 
-    <div>
-        <label for="direccion">Ingrese Direccion</label>
-        <input type="text" name="direccion" placeholder="Direccion" value="{{cliente.direccion}}">
-    </div>
+        <div>
+            <label class="col-lg-4 control-label" for="password">Ingrese Contraseña</label>
+            <input type="text" name="password" placeholder="Password" value="{{cliente.password}}">
+        </div>
 
-    <div>
-        <label for="telefono">Ingrese Telefono</label>
-        <input type="text" name="telefono" placeholder="Telefono" value="{{cliente.telefono}}">
-    </div>
+        <div>
+            <label class="col-lg-4 control-label" for="cuil">Ingrese CUIL</label>
+            <input type="text" name="cuil" placeholder="CUIL" value="{{cliente.cuil}}" >
+        </div>
 
-<button>Insertar</button>
-</form>
+        <div>
+            <label class="col-lg-4 control-label" for="cuit">Ingrese CUIT</label>
+            <input type="text" name="cuit" placeholder="CUIT" value="{{cliente.cuit}}">
+        </div>
+
+        <div>
+            <label class="col-lg-4 control-label" for="email">Ingrese EMAIL</label>
+            <input type="text" name="email" placeholder="Email" value="{{cliente.email}}">
+        </div>
+
+        <div>
+            <label class="col-lg-4 control-label" for="fechaNcimiento">Ingrese Fecha de Nacimiento</label>
+            <input type="text" name="fechaNacimiento" placeholder="Fecha Nacimiento" value="{{cliente.fechaNacimiento}}">
+        </div>
+
+        <div>
+            <label class="col-lg-4 control-label" for="direccion">Ingrese Direccion</label>
+            <input type="text" name="direccion" placeholder="Direccion" value="{{cliente.direccion}}">
+        </div>
+
+        <div>
+            <label class="col-lg-4 control-label" for="telefono">Ingrese Telefono</label>
+            <input type="text" name="telefono" placeholder="Telefono" value="{{cliente.telefono}}">
+        </div>
+
+        <button  type="button" class="btn btn-success" ">Insertar</button>
+    </form>
+
+        </div>
+        </div>
+    </div>
+</div>
